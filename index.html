@@ -22,36 +22,11 @@
             font-size: var(--font-size);
         }
     </style>
-    <style>
-        .p-button {
-            font-size: var(--font-size);
-            height: var(--button-height);
-            padding: 0 1em;
-            border-radius: var(--border-radius);
-            border: 1px solid var(--border-color);
-            background: var(--button-bg);
-        }
-        .p-button:hover {
-            border-color: var(--border-color-hover);
-        }
-        .p-button:active {
-            background-color: var(--button-active-bg);
-        }
-        .p-button:focus {
-            outline: none;
-        }
-    </style>
 </head>
 <body>
     <div id="app">
         <p-button></p-button>
     </div>
-    <script src="./node_modules/vue/dist/vue.min.js"></script>
-    <script src="./button.js"></script>
-    <script>
-        new Vue({
-            el: '#app',
-        })
-    </script>
+    <script src="./src/app.js"></script>
 </body>
 </html>
