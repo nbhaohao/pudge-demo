@@ -1,7 +1,7 @@
 <template>
-    <button class="p-button" :class="{[`icon-${iconPosition}`]: true}">
-        <p-icon class="p-icon-in-button" v-if="icon" :name="icon"></p-icon>
-        <p-icon class="loading" name="loading"></p-icon>
+    <button class="p-button" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
+        <p-icon class="p-icon-in-button" v-if="icon && !loading" :name="icon"></p-icon>
+        <p-icon v-if="loading" class="loading p-icon-in-button" name="loading"></p-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -14,6 +14,10 @@
             icon: {
                 type: String,
                 default: '',
+            },
+            loading: {
+                type: Boolean,
+                default: false,
             },
             iconPosition: {
                 type: String,
