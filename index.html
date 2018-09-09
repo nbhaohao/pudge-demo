@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <title>帕吉</title>
     <style>
-        *{margin: 0;padding: 0;box-sizing: border-box;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         :root {
             --button-height: 32px;
             --font-size: 14px;
@@ -15,18 +20,27 @@
             --border-color: #999;
             --border-color-hover: #666;
         }
+
         #app {
             margin: 20px;
         }
+
         body {
             font-size: var(--font-size);
+        }
+
+        .icon {
+            width: 1em;
+            height: 1em;
         }
     </style>
 </head>
 <body>
-    <div id="app">
-        <p-button></p-button>
-    </div>
-    <script src="./src/app.js"></script>
+<div id="app">
+    <p-button icon="settings">按钮</p-button>
+    <p-button icon="settings" icon-position="right">按钮</p-button>
+</div>
+<script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_829169_gqvcqxnxy7l.js"></script>
 </body>
 </html>
