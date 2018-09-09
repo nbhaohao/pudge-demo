@@ -1,8 +1,6 @@
 <template>
     <button class="p-button" :class="{[`icon-${iconPosition}`]: true}">
-        <svg v-if="icon" class="icon">
-            <use :xlink:href="`#i-${icon}`"></use>
-        </svg>
+        <p-icon class="p-icon-in-button" v-if="icon" :name="icon"></p-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -41,12 +39,12 @@
         vertical-align: middle;
         line-height: 1;
         &:hover {border-color: var(--border-color-hover);}
-        > .icon {order: 1;margin-right: .3em;}
+        > .p-icon-in-button {order: 1;margin-right: .3em;}
         > .content {order: 2;}
         &:active {background-color: var(--button-active-bg);}
         &:focus {outline: none;}
         &.icon-right {
-            > .icon {order: 2;margin-left: .3em;margin-right: 0;}
+            > .p-icon-in-button {order: 2;margin-left: .3em;margin-right: 0;}
             > .content {order: 1;}
         }
     }
