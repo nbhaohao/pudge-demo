@@ -6,7 +6,20 @@
 
 <script>
     export default {
-        name: "buttonGroup"
+        mounted() {
+            this.checkIsChildrenRight()
+        },
+        methods: {
+            checkIsChildrenRight() {
+                for (let node of this.$el.children) {
+                    let nodeName = node.nodeName.toLocaleLowerCase()
+                    if (nodeName === 'button') {
+                        continue
+                    }
+                    console.warn(`p-button-group 的子元素应该为 p-button, 此处检测到 ${nodeName}`)
+                }
+            }
+        },
     }
 </script>
 
