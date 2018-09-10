@@ -9,6 +9,7 @@
 </template>
 
 <script>
+    import Icon from './icon'
     export default {
         props: {
             icon: {
@@ -27,6 +28,9 @@
                 }
             },
         },
+        components: {
+            'p-icon': Icon,
+        }
     }
 </script>
 
