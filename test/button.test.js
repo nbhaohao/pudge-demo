@@ -82,7 +82,7 @@ describe('Button', () => {
             }
         })
         vm.$mount(div)
-        const callback = sinon.fake();
+        const callback = sinon.spy();
         vm.$on('click', callback)
         vm.$el.click()
         expect(callback).to.have.been.called
