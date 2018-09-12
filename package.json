@@ -2,7 +2,7 @@
   "name": "pudge-demo",
   "version": "0.0.1",
   "description": "这是一个 UI 框架",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
     "dev-test": "parcel watch test/* --no-cache",
